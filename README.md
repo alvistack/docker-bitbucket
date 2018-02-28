@@ -105,15 +105,14 @@ Upgrade
 To upgrade to a more recent version of Bitbucket Server you can simply stop the Bitbucket
 container and start a new one based on a more recent image:
 
-    docker stop confluence
-    docker rm confluence
+    docker stop bitbucket
+    docker rm bitbucket
     docker run ... (see above)
 
 As your data is stored in the data volume directory on the host, it will still
 be available after the upgrade.
 
-Note: Please make sure that you don't accidentally remove the confluence
-container and its volumes using the -v option.
+Note: Please make sure that you don't accidentally remove the bitbucket container and its volumes using the -v option.
 
 Backup
 ------
