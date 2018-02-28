@@ -35,7 +35,7 @@ Start Atlassian Bitbucket Server:
         --volume /var/atlassian/application-data/bitbucket:/var/atlassian/application-data/bitbucket \
         alvistack/docker-bitbucket
 
-**Success**. Bitbucket is now available on <http://localhost:8080>
+**Success**. Bitbucket is now available on <http://localhost:7990>
 
 Please ensure your container has the necessary resources allocated to it. We recommend 2GiB of memory allocated to accommodate both the application server and the git processes. See [Supported Platforms](https://confluence.atlassian.com/display/Bitbucket/Supported+Platforms) for further information.
 
@@ -105,15 +105,14 @@ Upgrade
 To upgrade to a more recent version of Bitbucket Server you can simply stop the Bitbucket
 container and start a new one based on a more recent image:
 
-    docker stop confluence
-    docker rm confluence
+    docker stop bitbucket
+    docker rm bitbucket
     docker run ... (see above)
 
 As your data is stored in the data volume directory on the host, it will still
 be available after the upgrade.
 
-Note: Please make sure that you don't accidentally remove the confluence
-container and its volumes using the -v option.
+Note: Please make sure that you don't accidentally remove the bitbucket container and its volumes using the -v option.
 
 Backup
 ------
