@@ -61,7 +61,7 @@ RUN set -ex \
 
 # Install Atlassian Bitbucket
 RUN set -ex \
-    && ARCHIVE="`mktemp --suffix=tar.gz`" \
+    && ARCHIVE="`mktemp --suffix=.tar.gz`" \
     && curl -skL $BITBUCKET_DOWNLOAD_URL > $ARCHIVE \
     && mkdir -p $BITBUCKET_CATALINA \
     && tar zxf $ARCHIVE --strip-components=1 -C $BITBUCKET_CATALINA \
