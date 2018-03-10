@@ -4,7 +4,7 @@ Docker Image Packaging for Atlassian Bitbucket
 [![Travis](https://img.shields.io/travis/alvistack/docker-bitbucket.svg)](https://travis-ci.org/alvistack/docker-bitbucket)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-bitbucket.svg)](https://github.com/alvistack/docker-bitbucket/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-bitbucket.svg)](https://github.com/alvistack/docker-bitbucket/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/docker-bitbucket.svg)](https://hub.docker.com/r/alvistack/docker-bitbucket/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/bitbucket.svg)](https://hub.docker.com/r/alvistack/bitbucket/)
 
 Bitbucket is an on-premises source code management solution for Git that's secure, fast, and enterprise grade. Create and manage repositories, set up fine-grained permissions, and collaborate on code - all with the flexibility of your servers.
 
@@ -24,7 +24,7 @@ Volume permission is managed by entry scripts. To get started you can use a data
 Start Atlassian Bitbucket Server:
 
     # Pull latest image
-    docker pull alvistack/docker-bitbucket
+    docker pull alvistack/bitbucket
 
     # Run as detach
     docker run \
@@ -33,7 +33,7 @@ Start Atlassian Bitbucket Server:
         --publish 7990:7990 \
         --publish 7999:7999 \
         --volume /var/atlassian/application-data/bitbucket:/var/atlassian/application-data/bitbucket \
-        alvistack/docker-bitbucket
+        alvistack/bitbucket
 
 **Success**. Bitbucket is now available on <http://localhost:7990>
 
@@ -122,7 +122,7 @@ For evaluations you can use the built-in database that will store its files in t
 Versioning
 ----------
 
-The `latest` tag matches the most recent version of this repository. Thus using `alvistack/docker-bitbucket:latest` or `alvistack/docker-bitbucket` will ensure you are running the most up to date version of this image.
+The `latest` tag matches the most recent version of this repository. Thus using `alvistack/bitbucket:latest` or `alvistack/bitbucket` will ensure you are running the most up to date version of this image.
 
 License
 -------
