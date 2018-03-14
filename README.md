@@ -10,6 +10,12 @@ Bitbucket is an on-premises source code management solution for Git that's secur
 
 Learn more about Bitbucket: <https://www.atlassian.com/software/bitbucket>
 
+Supported Tags and Respective `Dockerfile` Links
+------------------------------------------------
+
+-   [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-bitbucket/blob/master/Dockerfile)
+-   [`5.8` (5.8/Dockerfile)](https://github.com/alvistack/docker-bitbucket/blob/5.8/Dockerfile)
+
 Overview
 --------
 
