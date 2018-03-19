@@ -62,6 +62,10 @@ RUN set -ex \
     && chown -Rf $BITBUCKET_OWNER:$BITBUCKET_GROUP $BITBUCKET_CATALINA \
     && rm -rf $ARCHIVE
 
+# Install MariaDB Connector/J JAR
+RUN set -ex \
+    && curl -skL https://downloads.mariadb.com/Connectors/java/connector-java-2.2.1/mariadb-java-client-2.2.1.jar > $BITBUCKET_CATALINA/app/WEB-INF/lib/mariadb-java-client-2.2.1.jar
+
 # Install dumb-init
 RUN set -ex \
     && curl -skL https://github.com/Yelp/dumb-init/releases/download/v1.2.1/dumb-init_1.2.1_amd64 > /usr/local/bin/dumb-init \
