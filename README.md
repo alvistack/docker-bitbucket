@@ -15,6 +15,7 @@ Supported Tags and Respective `Dockerfile` Links
 
 -   [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-bitbucket/blob/master/Dockerfile)
 -   [`5.8` (5.8/Dockerfile)](https://github.com/alvistack/docker-bitbucket/blob/5.8/Dockerfile)
+-   [`5.9` (5.9/Dockerfile)](https://github.com/alvistack/docker-bitbucket/blob/5.9/Dockerfile)
 
 Overview
 --------
