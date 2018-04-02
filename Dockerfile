@@ -36,7 +36,7 @@ EXPOSE 7990
 EXPOSE 7999
 EXPOSE 8006
 
-ENTRYPOINT [ "/usr/local/bin/dumb-init", "--" ]
+ENTRYPOINT [ "dumb-init", "--" ]
 CMD        [ "/etc/init.d/bitbucket", "start", "-fg" ]
 
 # Prepare APT depedencies
