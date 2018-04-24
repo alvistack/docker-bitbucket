@@ -18,7 +18,7 @@ ENV BITBUCKET_OWNER              "daemon"
 ENV BITBUCKET_GROUP              "daemon"
 ENV BITBUCKET_HOME               "/var/atlassian/application-data/bitbucket"
 ENV BITBUCKET_CATALINA           "/opt/atlassian/bitbucket"
-ENV BITBUCKET_DOWNLOAD_URL       "https://downloads.atlassian.com/software/stash/downloads/atlassian-bitbucket-5.9.1.tar.gz"
+ENV BITBUCKET_DOWNLOAD_URL       "https://downloads.atlassian.com/software/stash/downloads/atlassian-bitbucket-5.10.0.tar.gz"
 ENV JAVA_HOME                    "/usr/java/default"
 ENV JVM_MINIMUM_MEMORY           "512m"
 ENV JVM_MAXIMUM_MEMORY           "1024m"
@@ -49,7 +49,7 @@ RUN set -ex \
 RUN set -ex \
     && ln -s /usr/bin/update-alternatives /usr/sbin/alternatives \
     && ARCHIVE="`mktemp --suffix=.rpm`" \
-    && curl -skL -j -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jre-8u162-linux-x64.rpm > $ARCHIVE \
+    && curl -skL -j -H "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jre-8u172-linux-x64.rpm > $ARCHIVE \
     && DEBIAN_FRONTEND=noninteractive alien -i -k --scripts $ARCHIVE \
     && rm -rf $ARCHIVE
 
