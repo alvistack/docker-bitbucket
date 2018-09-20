@@ -1,6 +1,6 @@
 diff -urp a/opt/atlassian/bitbucket/bin/set-bitbucket-home.sh b/opt/atlassian/bitbucket/bin/set-bitbucket-home.sh
---- a/opt/atlassian/bitbucket/bin/set-bitbucket-home.sh	2018-03-14 08:55:04.766651496 +0800
-+++ b/opt/atlassian/bitbucket/bin/set-bitbucket-home.sh	2018-03-10 22:10:03.658417708 +0800
+--- a/opt/atlassian/bitbucket/bin/set-bitbucket-home.sh	2018-09-20 17:53:26.859252030 +0800
++++ b/opt/atlassian/bitbucket/bin/set-bitbucket-home.sh	2018-09-20 17:49:31.000000000 +0800
 @@ -2,7 +2,7 @@
  # /bitbucket/home.  You can of course set it outside in the command terminal; that will also work.
  #
@@ -11,8 +11,8 @@ diff -urp a/opt/atlassian/bitbucket/bin/set-bitbucket-home.sh b/opt/atlassian/bi
  
  # When upgrading from the packaged distribution BITBUCKET_HOME may not be set. Fallback to legacy STASH_HOME
 diff -urp a/opt/atlassian/bitbucket/bin/set-bitbucket-user.sh b/opt/atlassian/bitbucket/bin/set-bitbucket-user.sh
---- a/opt/atlassian/bitbucket/bin/set-bitbucket-user.sh	2018-03-14 08:54:16.649488562 +0800
-+++ b/opt/atlassian/bitbucket/bin/set-bitbucket-user.sh	2018-03-10 22:10:03.662417597 +0800
+--- a/opt/atlassian/bitbucket/bin/set-bitbucket-user.sh	2018-09-20 17:53:26.859252030 +0800
++++ b/opt/atlassian/bitbucket/bin/set-bitbucket-user.sh	2018-09-20 17:49:31.000000000 +0800
 @@ -1,9 +1,9 @@
 -if [ -n "${BITBUCKET_USER}" ]; then
 +if [ -n "${BITBUCKET_OWNER}" ]; then
@@ -27,8 +27,8 @@ diff -urp a/opt/atlassian/bitbucket/bin/set-bitbucket-user.sh b/opt/atlassian/bi
 -export BITBUCKET_USER
 +export BITBUCKET_OWNER
 diff -urp a/opt/atlassian/bitbucket/bin/start-bitbucket.sh b/opt/atlassian/bitbucket/bin/start-bitbucket.sh
---- a/opt/atlassian/bitbucket/bin/start-bitbucket.sh	2018-03-14 08:54:23.034286787 +0800
-+++ b/opt/atlassian/bitbucket/bin/start-bitbucket.sh	2018-03-10 22:10:03.662417597 +0800
+--- a/opt/atlassian/bitbucket/bin/start-bitbucket.sh	2018-09-20 17:53:26.859252030 +0800
++++ b/opt/atlassian/bitbucket/bin/start-bitbucket.sh	2018-09-20 17:49:31.000000000 +0800
 @@ -52,7 +52,7 @@ else
      LAUNCH_CMD=start
  fi
@@ -69,8 +69,8 @@ diff -urp a/opt/atlassian/bitbucket/bin/start-bitbucket.sh b/opt/atlassian/bitbu
 \ No newline at end of file
 +fi
 diff -urp a/opt/atlassian/bitbucket/bin/_start-webapp.sh b/opt/atlassian/bitbucket/bin/_start-webapp.sh
---- a/opt/atlassian/bitbucket/bin/_start-webapp.sh	2018-03-14 08:53:59.399684153 +0800
-+++ b/opt/atlassian/bitbucket/bin/_start-webapp.sh	2018-03-10 22:10:03.658417708 +0800
+--- a/opt/atlassian/bitbucket/bin/_start-webapp.sh	2018-09-20 17:53:26.859252030 +0800
++++ b/opt/atlassian/bitbucket/bin/_start-webapp.sh	2018-09-20 17:58:13.266945290 +0800
 @@ -11,22 +11,22 @@ fi
  # environment variable has been set in the environment of the user running this script, uncommenting the below
  # will override that.
@@ -106,8 +106,8 @@ diff -urp a/opt/atlassian/bitbucket/bin/_start-webapp.sh b/opt/atlassian/bitbuck
 \ No newline at end of file
 +fi
 diff -urp a/opt/atlassian/bitbucket/bin/stop-bitbucket.sh b/opt/atlassian/bitbucket/bin/stop-bitbucket.sh
---- a/opt/atlassian/bitbucket/bin/stop-bitbucket.sh	2018-03-14 08:55:32.905394551 +0800
-+++ b/opt/atlassian/bitbucket/bin/stop-bitbucket.sh	2018-03-10 22:10:03.662417597 +0800
+--- a/opt/atlassian/bitbucket/bin/stop-bitbucket.sh	2018-09-20 17:53:26.859252030 +0800
++++ b/opt/atlassian/bitbucket/bin/stop-bitbucket.sh	2018-09-20 17:49:31.000000000 +0800
 @@ -22,7 +22,7 @@ if [ -z "$BITBUCKET_HOME" ]; then
      exit 1
  fi
