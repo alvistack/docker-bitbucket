@@ -29,7 +29,7 @@ Start Atlassian Bitbucket Server:
 
     # Pull latest image
     docker pull alvistack/bitbucket
-
+    
     # Run as detach
     docker run \
         -itd \
