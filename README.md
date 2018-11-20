@@ -12,8 +12,8 @@ Learn more about Bitbucket: <https://www.atlassian.com/software/bitbucket>
 ## Supported Tags and Respective `Dockerfile` Links
 
   - [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-bitbucket/blob/master/Dockerfile)
+  - [`5.16` (5.16/Dockerfile)](https://github.com/alvistack/docker-bitbucket/blob/5.16/Dockerfile)
   - [`5.15` (5.15/Dockerfile)](https://github.com/alvistack/docker-bitbucket/blob/5.15/Dockerfile)
-  - [`5.14` (5.14/Dockerfile)](https://github.com/alvistack/docker-bitbucket/blob/5.14/Dockerfile)
 
 ## Overview
 
