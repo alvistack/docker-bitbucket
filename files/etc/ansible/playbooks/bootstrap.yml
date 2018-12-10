@@ -25,6 +25,7 @@
     - role: apt
     - role: yum
     - role: locales
+      timezone: "{{ lookup('env', 'TZ') }}"
     - role: timezone
     - role: dumb-init
 
