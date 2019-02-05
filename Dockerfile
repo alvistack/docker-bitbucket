@@ -14,8 +14,8 @@
 
 FROM ubuntu:18.04
 
-ENV BITBUCKET_OWNER              "daemon"
-ENV BITBUCKET_GROUP              "daemon"
+ENV BITBUCKET_OWNER              "bitbucket"
+ENV BITBUCKET_GROUP              "bitbucket"
 ENV BITBUCKET_HOME               "/var/atlassian/application-data/bitbucket"
 ENV BITBUCKET_CATALINA           "/opt/atlassian/bitbucket"
 ENV BITBUCKET_DOWNLOAD_URL       "https://product-downloads.atlassian.com/software/stash/downloads/atlassian-bitbucket-5.16.1.tar.gz"

@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+  - Run systemd service with specific system user
+
 ## 5.16.0-1alvistack1 - 2018-12-10
 
 ### Major Changes
