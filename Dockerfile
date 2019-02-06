@@ -41,6 +41,11 @@ EXPOSE 8006
 ENTRYPOINT [ "dumb-init", "--" ]
 CMD        [ "docker-entrypoint.sh" ]
 
+# Explicitly set system user UID/GID
+RUN set -ex \
+    && groupadd -r $BITBUCKET_OWNER \
+    && useradd -r -g $BITBUCKET_GROUP -d $BITBUCKET_HOME -M -s /usr/sbin/nologin $BITBUCKET_OWNER
+
 # Prepare APT depedencies
 RUN set -ex \
     && apt-get update \
