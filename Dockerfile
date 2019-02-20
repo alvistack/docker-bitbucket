@@ -46,7 +46,7 @@ RUN set -ex \
     && groupadd -r $BITBUCKET_OWNER \
     && useradd -r -g $BITBUCKET_GROUP -d $BITBUCKET_HOME -M -s /usr/sbin/nologin $BITBUCKET_OWNER
 
-# Prepare APT depedencies
+# Prepare APT dependencies
 RUN set -ex \
     && apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential curl git libffi-dev libssl-dev python python-dev \
