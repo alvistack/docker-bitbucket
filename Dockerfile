@@ -18,7 +18,7 @@ ENV BITBUCKET_OWNER              "bitbucket"
 ENV BITBUCKET_GROUP              "bitbucket"
 ENV BITBUCKET_HOME               "/var/atlassian/application-data/bitbucket"
 ENV BITBUCKET_CATALINA           "/opt/atlassian/bitbucket"
-ENV BITBUCKET_DOWNLOAD_URL       "https://product-downloads.atlassian.com/software/stash/downloads/atlassian-bitbucket-6.0.0.tar.gz"
+ENV BITBUCKET_DOWNLOAD_URL       "https://product-downloads.atlassian.com/software/stash/downloads/atlassian-bitbucket-6.0.1.tar.gz"
 ENV JAVA_HOME                    "/usr/lib/jvm/java-8-openjdk-amd64"
 ENV JVM_MINIMUM_MEMORY           "512m"
 ENV JVM_MAXIMUM_MEMORY           "1024m"
@@ -46,7 +46,7 @@ RUN set -ex \
     && groupadd -r $BITBUCKET_OWNER \
     && useradd -r -g $BITBUCKET_GROUP -d $BITBUCKET_HOME -M -s /usr/sbin/nologin $BITBUCKET_OWNER
 
-# Prepare APT depedencies
+# Prepare APT dependencies
 RUN set -ex \
     && apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y install build-essential curl git libffi-dev libssl-dev python python-dev \
