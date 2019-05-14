@@ -10,7 +10,7 @@
 
   - Run systemd service with specific system user
   - Explicitly set system user UID/GID
-  - Manually install archived GIT 2.20.1 for Bitbucket 6.0+, see https://jira.atlassian.com/browse/BSERV-11593
+  - Manually install archived GIT 2.20.1 for Bitbucket 6.0+, see <https://jira.atlassian.com/browse/BSERV-11593>
   - Porting to Molecule based
 
 ## 5.16.0-1alvistack1 - 2018-12-10
