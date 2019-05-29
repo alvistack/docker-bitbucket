@@ -14,13 +14,11 @@
 
 FROM ubuntu:18.04
 
+ENV BITBUCKET_VERSION            "6.3.0"
 ENV BITBUCKET_OWNER              "bitbucket"
 ENV BITBUCKET_GROUP              "bitbucket"
 ENV BITBUCKET_HOME               "/var/atlassian/application-data/bitbucket"
 ENV BITBUCKET_CATALINA           "/opt/atlassian/bitbucket"
-ENV BITBUCKET_DOWNLOAD_URL       "https://product-downloads.atlassian.com/software/stash/downloads/atlassian-bitbucket-6.3.0.tar.gz"
-ENV BITBUCKET_DOWNLOAD_DEST      "/tmp/atlassian-bitbucket-6.3.0.tar.gz"
-ENV BITBUCKET_DOWNLOAD_CHECKSUM  "sha1:8db35c3aadb32ba9785db605fb69c957b8dd9c56"
 ENV JAVA_HOME                    "/usr/lib/jvm/java-8-openjdk-amd64"
 ENV JVM_MINIMUM_MEMORY           "512m"
 ENV JVM_MAXIMUM_MEMORY           "1024m"
