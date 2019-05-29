@@ -32,7 +32,4 @@
         - { state: "latest", name: "openjdk-8-jdk" }
       java_home: "/usr/lib/jvm/java-8-openjdk-amd64"
     - role: bitbucket
-      bitbucket_download:
-        url: "{{ lookup('env','BITBUCKET_DOWNLOAD_URL') }}"
-        dest: "{{ lookup('env','BITBUCKET_DOWNLOAD_DEST') }}"
-        checksum: "{{ lookup('env','BITBUCKET_DOWNLOAD_CHECKSUM') }}"
+      bitbucket_version: "{{ lookup('env','BITBUCKET_VERSION') }}"
