@@ -14,7 +14,7 @@
 
 FROM ubuntu:18.04
 
-ENV BITBUCKET_VERSION            "6.3.0"
+ENV BITBUCKET_VERSION            "6.3.1"
 ENV BITBUCKET_OWNER              "bitbucket"
 ENV BITBUCKET_GROUP              "bitbucket"
 ENV BITBUCKET_HOME               "/var/atlassian/application-data/bitbucket"
