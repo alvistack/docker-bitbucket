@@ -13,7 +13,7 @@ Learn more about Bitbucket: <https://www.atlassian.com/software/bitbucket>
 
   - [`latest` (master/Dockerfile)](https://github.com/alvistack/docker-bitbucket/blob/master/Dockerfile)
   - [`6.5` (6.5/Dockerfile)](https://github.com/alvistack/docker-bitbucket/blob/6.5/Dockerfile)
-  - [`6.4` (6.4/Dockerfile)](https://github.com/alvistack/docker-bitbucket/blob/6.4/Dockerfile)
+  - [`6.6` (6.6/Dockerfile)](https://github.com/alvistack/docker-bitbucket/blob/6.6/Dockerfile)
 
 ## Overview
 
