@@ -38,8 +38,8 @@ EXPOSE 7990
 EXPOSE 7999
 EXPOSE 8006
 
-ENTRYPOINT [ "dumb-init", "--" ]
-CMD        [ "docker-entrypoint.sh" ]
+ENTRYPOINT [ "dumb-init", "--", "docker-entrypoint.sh" ]
+CMD        [ "/opt/atlassian/bitbucket/bin/start-bitbucket.sh", "-fg" ]
 
 # Explicitly set system user UID/GID
 RUN set -ex \

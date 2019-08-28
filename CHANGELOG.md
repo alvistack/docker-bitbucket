@@ -1,8 +1,17 @@
 # Docker Image Packaging for Atlassian Bitbucket
 
-## 6.3.x-0alvistack1 - TBC
+## 6.6.0-0alvistack3 - TBC
 
 ### Major Changes
+
+## 6.6.0-0alvistack3 - 2018
+
+### Major Changes
+
+  - Simplify parameters combination with `BAMBOO_VERSION`
+  - Ensure required folders exist with correct owner:group
+  - Prepend executable if command starts with an option
+  - Improve `ENTRYPOINT` and `CMD`
 
 ## 6.3.0-0alvistack4 - 2019-05-20
 
