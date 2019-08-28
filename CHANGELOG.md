@@ -1,10 +1,10 @@
 # Docker Image Packaging for Atlassian Bitbucket
 
-## 6.6.0-0alvistack3 - TBC
+## 6.6.x-0alvistack3 - TBC
 
 ### Major Changes
 
-## 6.6.0-0alvistack3 - 2018
+## 6.6.0-0alvistack3 - 2019-08-29
 
 ### Major Changes
 
