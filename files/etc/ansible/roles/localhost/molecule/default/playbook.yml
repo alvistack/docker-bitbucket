@@ -28,8 +28,6 @@
   roles:
     - role: git
     - role: java
-      package:
-        - { state: "latest", name: "openjdk-8-jdk" }
-      java_home: "/usr/lib/jvm/java-8-openjdk-amd64"
+      java_version: "{{ lookup('env','JAVA_VERSION') }}"
     - role: bitbucket
       bitbucket_version: "{{ lookup('env','BITBUCKET_VERSION') }}"

@@ -14,12 +14,12 @@
 
 FROM ubuntu:18.04
 
+ENV JAVA_VERSION                 "1.8.0"
 ENV BITBUCKET_VERSION            "6.6.0"
 ENV BITBUCKET_OWNER              "bitbucket"
 ENV BITBUCKET_GROUP              "bitbucket"
 ENV BITBUCKET_HOME               "/var/atlassian/application-data/bitbucket"
 ENV BITBUCKET_CATALINA           "/opt/atlassian/bitbucket"
-ENV JAVA_HOME                    "/usr/lib/jvm/java-8-openjdk-amd64"
 ENV JVM_MINIMUM_MEMORY           "512m"
 ENV JVM_MAXIMUM_MEMORY           "1024m"
 ENV CATALINA_CONNECTOR_PROXYNAME ""
