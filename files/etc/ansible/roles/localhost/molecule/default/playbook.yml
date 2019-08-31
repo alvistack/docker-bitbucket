@@ -28,6 +28,6 @@
   roles:
     - role: git
     - role: java
-      java_version: "{{ lookup('env','JAVA_VERSION') }}"
+      java_release: "{{ lookup('env','JAVA_RELEASE') }}"
     - role: bitbucket
       bitbucket_version: "{{ lookup('env','BITBUCKET_VERSION') }}"
