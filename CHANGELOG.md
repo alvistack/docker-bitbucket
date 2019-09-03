@@ -7,7 +7,6 @@
   - Allow the container to be stated with `--user`
   - Simplify parameters combination with `JAVA_RELEASE`
   - Simplify parameters combination with `BAMBOO_VERSION`
-  - Ensure required folders exist with correct owner:group
   - Prepend executable if command starts with an option
   - Improve `ENTRYPOINT` and `CMD`
 
