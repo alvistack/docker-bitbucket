@@ -14,7 +14,6 @@
 
 FROM ubuntu:18.04
 
-ENV JAVA_RELEASE                 "1.8.x"
 ENV BITBUCKET_VERSION            "6.6.1"
 ENV BITBUCKET_OWNER              "bitbucket"
 ENV BITBUCKET_GROUP              "bitbucket"

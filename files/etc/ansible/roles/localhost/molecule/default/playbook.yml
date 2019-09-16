@@ -29,6 +29,6 @@
   roles:
     - role: git
     - role: java
-      java_release: "{{ lookup('env','JAVA_RELEASE') }}"
+      java_release: "8"
     - role: bitbucket
       bitbucket_version: "{{ lookup('env','BITBUCKET_VERSION') }}"
