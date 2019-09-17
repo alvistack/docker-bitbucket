@@ -32,3 +32,11 @@
       java_release: "8"
     - role: bitbucket
       bitbucket_version: "{{ lookup('env','BITBUCKET_VERSION') }}"
+      bitbucket_jvm_minimum_memory: "{{ lookup('env', 'JVM_MINIMUM_MEMORY') }}"
+      bitbucket_jvm_maximum_memory: "{{ lookup('env', 'JVM_MAXIMUM_MEMORY') }}"
+      bitbucket_catalina_connector_proxyname: "{{ lookup('env', 'CATALINA_CONNECTOR_PROXYNAME') }}"
+      bitbucket_catalina_connector_proxyport: "{{ lookup('env', 'CATALINA_CONNECTOR_PROXYPORT') }}"
+      bitbucket_catalina_connector_scheme: "{{ lookup('env', 'CATALINA_CONNECTOR_SCHEME') }}"
+      bitbucket_catalina_connector_secure: "{{ lookup('env', 'CATALINA_CONNECTOR_SECURE') }}"
+      bitbucket_catalina_context_path: "{{ lookup('env', 'CATALINA_CONTEXT_PATH') }}"
+      bitbucket_jvm_support_recommended_args: "{{ lookup('env', 'JVM_SUPPORT_RECOMMENDED_ARGS') }}"
