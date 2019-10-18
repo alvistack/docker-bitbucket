@@ -45,3 +45,4 @@
       bitbucket_catalina_connector_secure: "{{ lookup('env', 'CATALINA_CONNECTOR_SECURE') }}"
       bitbucket_catalina_context_path: "{{ lookup('env', 'CATALINA_CONTEXT_PATH') }}"
       bitbucket_jvm_support_recommended_args: "{{ lookup('env', 'JVM_SUPPORT_RECOMMENDED_ARGS') }}"
+    - role: localhost
