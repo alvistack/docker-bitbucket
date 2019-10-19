@@ -33,7 +33,7 @@ ENV CATALINA_CONNECTOR_SECURE    "false"
 ENV CATALINA_CONTEXT_PATH        "/"
 ENV JVM_SUPPORT_RECOMMENDED_ARGS "-Datlassian.plugins.enable.wait=300 -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:MaxRAMFraction=1"
 ENV SESSION_TIMEOUT              "300"
-ENV PATH                         "$PATH:BITBUCKET_CATALINA/bin"
+ENV PATH                         "$PATH:$BITBUCKET_CATALINA/bin"
 
 VOLUME  $BITBUCKET_HOME
 WORKDIR $BITBUCKET_HOME
