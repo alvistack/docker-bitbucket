@@ -13,3 +13,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+java_release: "{{ lookup('env', 'JAVA_RELEASE') }}"
+bitbucket_version: "{{ lookup('env','BITBUCKET_VERSION') }}"
+bitbucket_owner: "{{ lookup('env','BITBUCKET_OWNER') }}"
+bitbucket_group: "{{ lookup('env','BITBUCKET_GROUP') }}"
+bitbucket_home: "{{ lookup('env','BITBUCKET_HOME') }}"
+bitbucket_catalina: "{{ lookup('env','BITBUCKET_CATALINA') }}"
+bitbucket_jvm_minimum_memory: "{{ lookup('env', 'JVM_MINIMUM_MEMORY') }}"
+bitbucket_jvm_maximum_memory: "{{ lookup('env', 'JVM_MAXIMUM_MEMORY') }}"
+bitbucket_catalina_connector_proxyname: "{{ lookup('env', 'CATALINA_CONNECTOR_PROXYNAME') }}"
+bitbucket_catalina_connector_proxyport: "{{ lookup('env', 'CATALINA_CONNECTOR_PROXYPORT') }}"
+bitbucket_catalina_connector_scheme: "{{ lookup('env', 'CATALINA_CONNECTOR_SCHEME') }}"
+bitbucket_catalina_connector_secure: "{{ lookup('env', 'CATALINA_CONNECTOR_SECURE') }}"
+bitbucket_catalina_context_path: "{{ lookup('env', 'CATALINA_CONTEXT_PATH') }}"
+bitbucket_jvm_support_recommended_args: "{{ lookup('env', 'JVM_SUPPORT_RECOMMENDED_ARGS') }}"
