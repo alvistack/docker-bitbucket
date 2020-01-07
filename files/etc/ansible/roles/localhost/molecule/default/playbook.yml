@@ -29,6 +29,6 @@
   remote_user: root
   roles:
     - role: git
-    - role: java
+    - role: openjdk
     - role: bitbucket
     - role: localhost

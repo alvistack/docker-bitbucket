@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-java_release: "{{ lookup('env', 'JAVA_RELEASE') }}"
+openjdk_release: "{{ lookup('env', 'OPENJDK_RELEASE') }}"
 bitbucket_version: "{{ lookup('env','BITBUCKET_VERSION') }}"
 bitbucket_owner: "{{ lookup('env','BITBUCKET_OWNER') }}"
 bitbucket_group: "{{ lookup('env','BITBUCKET_GROUP') }}"
