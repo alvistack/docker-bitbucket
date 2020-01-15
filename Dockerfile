@@ -43,7 +43,7 @@ EXPOSE 7990
 EXPOSE 7999
 EXPOSE 8006
 
-ENTRYPOINT [ "dumb-init", "--", "docker-entrypoint.sh" ]
+ENTRYPOINT [ "tini", "-g", "--", "docker-entrypoint.sh" ]
 CMD        [ "start-bitbucket.sh", "-fg" ]
 
 # Hotfix for en_US.utf8 locale
