@@ -1,10 +1,15 @@
 # Docker Image Packaging for Atlassian Bitbucket
 
-## 6.10.0-XalvistackY - TBC
+## 6.10.1-XalvistackY - TBC
+
+### Major Changes
+
+## 6.10.1-4alvistack1 - 2020-03-04
 
 ### Major Changes
 
   - Revamp with Molecule and `docker commit`
+  - Hotfix for systemd
 
 ## 6.10.0-3alvistack1 - 2020-01-15
 
