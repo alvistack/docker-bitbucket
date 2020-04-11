@@ -4,6 +4,12 @@
 
 ### Major Changes
 
+## 7.1.0-4alvistack2 - 2020-04-11
+
+### Major Changes
+
+  - Debug build
+
 ## 6.10.1-4alvistack4 - 2020-03-05
 
 ### Major Changes
