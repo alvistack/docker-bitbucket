@@ -2,10 +2,6 @@
 	path = roles/bitbucket
 	url = https://github.com/alvistack/ansible-role-bitbucket.git
 	branch = develop
-[submodule "roles/bootstrap"]
-	path = roles/bootstrap
-	url = https://github.com/alvistack/ansible-role-bootstrap.git
-	branch = develop
 [submodule "roles/git"]
 	path = roles/git
 	url = https://github.com/alvistack/ansible-role-git.git
