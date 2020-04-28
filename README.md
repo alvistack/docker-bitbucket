@@ -11,8 +11,8 @@ Learn more about Bitbucket: <https://www.atlassian.com/software/bitbucket>
 
 ## Supported Tags and Respective `Dockerfile` Links
 
-  - [`7.1`, `latest`](https://github.com/alvistack/docker-bitbucket/blob/master/molecule/7.1/Dockerfile.j2)
-  - [`7.0`](https://github.com/alvistack/docker-bitbucket/blob/master/molecule/7.0/Dockerfile.j2)
+  - [`7.2`, `latest`](https://github.com/alvistack/docker-bitbucket/blob/master/molecule/7.2/Dockerfile.j2)
+  - [`7.1`](https://github.com/alvistack/docker-bitbucket/blob/master/molecule/7.1/Dockerfile.j2)
 
 ## Overview
 
