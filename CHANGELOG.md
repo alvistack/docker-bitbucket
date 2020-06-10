@@ -4,6 +4,10 @@
 
 ### Major Changes
 
+## 7.3.0-4alvistack3 - 2020-06-10
+
+### Major Changes
+
   - Revamp `create`, `side_effect`, `verify` and `destroy` logic
   - Replace `tini` with `catatonit`
   - Rename `post_tasks.yml` as `side_effect.yml`
