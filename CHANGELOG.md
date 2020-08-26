@@ -1,6 +1,10 @@
 # Docker Image Packaging for Atlassian Bitbucket
 
-## 7.5.0-XalvistackY - TBC
+## 7.5.1-XalvistackY - TBC
+
+### Major Changes
+
+## 7.5.1-4alvistack2 - 2020-08-26
 
 ### Major Changes
 
