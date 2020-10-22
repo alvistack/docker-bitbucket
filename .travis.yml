@@ -11,8 +11,8 @@ services:
 
 env:
   jobs:
+    - MOLECULE_SCENARIO_NAME="7.7"
     - MOLECULE_SCENARIO_NAME="7.6"
-    - MOLECULE_SCENARIO_NAME="7.5"
 
 before_install:
   - |
