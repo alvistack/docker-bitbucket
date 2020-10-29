@@ -9,10 +9,10 @@ Bitbucket is an on-premises source code management solution for Git that's secur
 
 Learn more about Bitbucket: <https://www.atlassian.com/software/bitbucket>
 
-## Supported Tags and Respective `Dockerfile` Links
+## Supported Tags and Respective Packer Template Links
 
-  - [`7.7`, `latest`](https://github.com/alvistack/docker-bitbucket/blob/master/molecule/7.7/Dockerfile.j3)
-  - [`7.6`](https://github.com/alvistack/docker-bitbucket/blob/master/molecule/7.6/Dockerfile.j2)
+  - [`7.7`, `latest`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/7.7/Dockerfile.j3)
+  - [`7.6`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/7.6/packer.json)
 
 ## Overview
 
@@ -20,8 +20,7 @@ This Docker container makes it easy to get an instance of Bitbucket up and runni
 
 Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
-  - Minimized `Dockerfile` for meta data definition
-  - Provision by Ansible and Molecule Docker driver in single layer
+  - Packaging by Packer Docker builder and Ansible provisioner in single layer
   - Handle `ENTRYPOINT` with [catatonit](https://github.com/openSUSE/catatonit)
 
 ### Quick Start
