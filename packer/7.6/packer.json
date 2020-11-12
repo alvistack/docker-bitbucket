@@ -17,7 +17,7 @@
         "ENV CATALINA_CONNECTOR_SCHEME http",
         "ENV CATALINA_CONNECTOR_SECURE false",
         "ENV CATALINA_CONTEXT_PATH \"/\"",
-        "ENV JVM_SUPPORT_RECOMMENDED_ARGS -Datlassian.plugins.enable.wait=300 -XX:+UnlockExperimentalVMOptions -XX:+UseContainerSupport -XX:+UseZGC",
+        "ENV JVM_SUPPORT_RECOMMENDED_ARGS -Datlassian.plugins.enable.wait=300 -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:MaxRAMFraction=1",
         "ENV SESSION_TIMEOUT 300",
         "ENV PATH $PATH:$BITBUCKET_CATALINA/bin",
         "VOLUME $BITBUCKET_HOME",
@@ -38,6 +38,7 @@
       "inline": [
         "set -ex",
         "apt-get update",
+        "apt-get dist-upgrade -y",
         "apt-get install -y ca-certificates curl gcc iproute2 python3 python3-dev sudo"
       ],
       "type": "shell"
