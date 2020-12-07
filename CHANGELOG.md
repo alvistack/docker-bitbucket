@@ -4,6 +4,7 @@
 
 ### Major Changes
 
+  - Migrate from Travis CI to GitLab CI
   - Revamp with Packer
 
 ## 7.6.0-4alvistack5 - 2020-10-14

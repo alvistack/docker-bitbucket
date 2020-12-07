@@ -11,8 +11,8 @@ Learn more about Bitbucket: <https://www.atlassian.com/software/bitbucket>
 
 ## Supported Tags and Respective Packer Template Links
 
-  - [`7.8`, `latest`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/7.8/Dockerfile.j3)
-  - [`7.7`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/7.7/packer.json)
+  - [`7.8`, `latest`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-7.8/Dockerfile.j3)
+  - [`7.7`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-7.7/packer.json)
 
 ## Overview
 
