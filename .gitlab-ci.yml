@@ -96,6 +96,7 @@ deploy:docker-7.8:
     key: "$CI_PIPELINE_ID-docker-7.8"
     paths:
       - packer/*/output-docker/*.tar.gz
+    policy: pull
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "7.8"
@@ -120,6 +121,7 @@ deploy:docker-7.7:
     key: "$CI_PIPELINE_ID-docker-7.7"
     paths:
       - packer/*/output-docker/*.tar.gz
+    policy: pull
   variables:
     _PACKER_BUILDER_PROVIDER: "docker"
     _PACKER_BUILDER_VERSION: "7.7"
