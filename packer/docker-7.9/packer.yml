@@ -14,4 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-bitbucket_version: "7.7.1"
+- import_playbook: ../../playbooks/prepare.yml
+- import_playbook: ../../playbooks/converge.yml
+- import_playbook: ../../playbooks/cleanup.yml
