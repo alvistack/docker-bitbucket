@@ -3,7 +3,7 @@
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-bitbucket/master)](https://gitlab.com/alvistack/docker-bitbucket/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-bitbucket.svg)](https://github.com/alvistack/docker-bitbucket/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-bitbucket.svg)](https://github.com/alvistack/docker-bitbucket/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/butbucket-7.9.svg)](https://hub.docker.com/r/alvistack/butbucket-7.9)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/bitbucket-7.9.svg)](https://hub.docker.com/r/alvistack/bitbucket-7.9)
 
 Bitbucket is an on-premises source code management solution for Git that's secure, fast, and enterprise grade. Create and manage repositories, set up fine-grained permissions, and collaborate on code - all with the flexibility of your servers.
 
