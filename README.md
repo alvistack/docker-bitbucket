@@ -1,9 +1,9 @@
 # Docker Image Packaging for Atlassian Bitbucket
 
-[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-bitbucket/master)](https://gitlab.com/alvistack/docker-bitbucket/-/pipelines)
+[![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-bitbucket/master)](https://gitlab.com/alvistack/docker-bitbucket/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-bitbucket.svg)](https://github.com/alvistack/docker-bitbucket/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-bitbucket.svg)](https://github.com/alvistack/docker-bitbucket/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/bitbucket.svg)](https://hub.docker.com/r/alvistack/bitbucket/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/butbucket-7.9.svg)](https://hub.docker.com/r/alvistack/butbucket-7.9)
 
 Bitbucket is an on-premises source code management solution for Git that's secure, fast, and enterprise grade. Create and manage repositories, set up fine-grained permissions, and collaborate on code - all with the flexibility of your servers.
 
@@ -11,8 +11,10 @@ Learn more about Bitbucket: <https://www.atlassian.com/software/bitbucket>
 
 ## Supported Tags and Respective Packer Template Links
 
-  - [`7.9`, `latest`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-7.9/Dockerfile.j3)
-  - [`7.8`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-7.8/packer.json)
+  - [`alvistack/bitbucket-7.9`](https://hub.docker.com/r/alvistack/bitbucket-7.9)
+      - [`packer/docker-7.9/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-7.9/packer.json)
+  - [`alvistack/bitbucket-7.8`](https://hub.docker.com/r/alvistack/bitbucket-7.8)
+      - [`packer/docker-7.8/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-7.8/packer.json)
 
 ## Overview
 
@@ -143,13 +145,13 @@ For evaluations you can use the built-in database that will store its files in t
 
 ## Versioning
 
-### `alvistack/bitbucket:latest`
+### `YYYYMMDD.Y.Z`
 
-The `latest` tag matches the most recent [GitHub Release](https://github.com/alvistack/docker-bitbucket/releases) of this repository. Thus using `alvistack/bitbucket:latest` or `alvistack/bitbucket` will ensure you are running the most up to date stable version of this image.
+Release tags could be find from [GitHub Release](https://github.com/alvistack/docker-bitbucket/releases) of this repository. Thus using these tags will ensure you are running the most up to date stable version of this image.
 
-### `alvistack/bitbucket:<version>`
+### `YYYYMMDD.0.0`
 
-The version tags are rolling release rebuild by [Travis](https://travis-ci.com/alvistack/docker-bitbucket) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
+Version tags ended with `.0.0` are rolling release rebuild by [GitLab pipeline](https://gitlab.com/alvistack/docker-bitbucket/-/pipelines) in weekly basis. Thus using these tags will ensure you are running the latest packages provided by the base image project.
 
 ## License
 
