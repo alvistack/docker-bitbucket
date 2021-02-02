@@ -32,3 +32,4 @@ bitbucket_jvm_support_recommended_args: >-
   -XX:+UnlockExperimentalVMOptions
   -XX:+UseCGroupMemoryLimitForHeap
   -XX:MaxRAMFraction=1
+bitbucket_session_timeout: "120"
