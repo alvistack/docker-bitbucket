@@ -3,7 +3,7 @@
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-bitbucket/master)](https://gitlab.com/alvistack/docker-bitbucket/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-bitbucket.svg)](https://github.com/alvistack/docker-bitbucket/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-bitbucket.svg)](https://github.com/alvistack/docker-bitbucket/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/bitbucket-7.9.svg)](https://hub.docker.com/r/alvistack/bitbucket-7.9)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/bitbucket-7.10.svg)](https://hub.docker.com/r/alvistack/bitbucket-7.10)
 
 Bitbucket is an on-premises source code management solution for Git that's secure, fast, and enterprise grade. Create and manage repositories, set up fine-grained permissions, and collaborate on code - all with the flexibility of your servers.
 
@@ -11,10 +11,10 @@ Learn more about Bitbucket: <https://www.atlassian.com/software/bitbucket>
 
 ## Supported Tags and Respective Packer Template Links
 
+  - [`alvistack/bitbucket-7.10`](https://hub.docker.com/r/alvistack/bitbucket-7.10)
+      - [`packer/docker-7.10/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-7.10/packer.json)
   - [`alvistack/bitbucket-7.9`](https://hub.docker.com/r/alvistack/bitbucket-7.9)
       - [`packer/docker-7.9/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-7.9/packer.json)
-  - [`alvistack/bitbucket-7.8`](https://hub.docker.com/r/alvistack/bitbucket-7.8)
-      - [`packer/docker-7.8/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-7.8/packer.json)
 
 ## Overview
 

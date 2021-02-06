@@ -15,7 +15,7 @@
 # limitations under the License.
 
 openjdk_release: "8"
-bitbucket_version: "7.9.1"
+bitbucket_version: "7.10.0"
 bitbucket_owner: "bitbucket"
 bitbucket_group: "bitbucket"
 bitbucket_home: "/var/atlassian/application-data/bitbucket"
