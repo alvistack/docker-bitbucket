@@ -107,7 +107,7 @@
         mode: "{{ item.mode | default('0644') }}"
       loop:
         - { dest: "/etc/ansible/ansible.cfg" }
-        - { dest: "/etc/ansible/group_vars/all/00-defaults.yml" }
+        - { dest: "/etc/ansible/group_vars/all/99-packer.yml" }
         - { dest: "/etc/sudoers.d/bitbucket" }
         - { dest: "/usr/local/bin/docker-entrypoint.sh", mode: "0755" }
 
@@ -120,7 +120,7 @@
         state: "{{ item.state | default('file') }}"
       loop:
         - { dest: "/etc/ansible/ansible.cfg" }
-        - { dest: "/etc/ansible/group_vars/all/00-defaults.yml" }
+        - { dest: "/etc/ansible/group_vars/all/99-packer.yml" }
         - { dest: "/etc/sudoers.d/bitbucket" }
         - { dest: "/usr/local/bin/docker-entrypoint.sh", mode: "0755" }
 
