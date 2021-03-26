@@ -93,6 +93,31 @@ default:
   before_script:
     - *script-git-submodule
 
+build:docker-7.11:
+  <<: *job-packer-build
+  stage: build
+  cache:
+    key: "$CI_PIPELINE_ID-docker-7.11"
+    paths:
+      - packer/*/output-docker/*.tar.gz
+  variables:
+    _PACKER_BUILDER_PROVIDER: "docker"
+    _PACKER_BUILDER_VERSION: "7.11"
+
+deploy:docker-7.11:
+  <<: *job-docker-push
+  stage: deploy
+  cache:
+    key: "$CI_PIPELINE_ID-docker-7.11"
+    paths:
+      - packer/*/output-docker/*.tar.gz
+    policy: pull
+  variables:
+    _PACKER_BUILDER_PROVIDER: "docker"
+    _PACKER_BUILDER_VERSION: "7.11"
+  needs:
+    - build:docker-7.11
+
 build:docker-7.10:
   <<: *job-packer-build
   stage: build
@@ -117,28 +142,3 @@ deploy:docker-7.10:
     _PACKER_BUILDER_VERSION: "7.10"
   needs:
     - build:docker-7.10
-
-build:docker-7.9:
-  <<: *job-packer-build
-  stage: build
-  cache:
-    key: "$CI_PIPELINE_ID-docker-7.9"
-    paths:
-      - packer/*/output-docker/*.tar.gz
-  variables:
-    _PACKER_BUILDER_PROVIDER: "docker"
-    _PACKER_BUILDER_VERSION: "7.9"
-
-deploy:docker-7.9:
-  <<: *job-docker-push
-  stage: deploy
-  cache:
-    key: "$CI_PIPELINE_ID-docker-7.9"
-    paths:
-      - packer/*/output-docker/*.tar.gz
-    policy: pull
-  variables:
-    _PACKER_BUILDER_PROVIDER: "docker"
-    _PACKER_BUILDER_VERSION: "7.9"
-  needs:
-    - build:docker-7.9
