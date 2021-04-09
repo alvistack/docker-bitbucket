@@ -115,6 +115,17 @@
         - { dest: "/etc/ansible/roles" }
         - { dest: "/etc/sudoers.d" }
 
+    - name: rsync directories
+      synchronize:
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+        archive: true
+        delete: true
+      loop:
+        - { src: "../inventory/default/", dest: "/etc/ansible" }
+        - { src: "../roles/", dest: "/etc/ansible/roles" }
+        - { src: "../playbooks/", dest: "/etc/ansible/playbooks" }
+
     - name: copy templates
       template:
         dest: "{{ item.dest }}"
@@ -138,14 +149,3 @@
         - { dest: "/etc/ansible/ansible.cfg" }
         - { dest: "/etc/ansible/group_vars/all/99-packer.yml" }
         - { dest: "/etc/sudoers.d/bitbucket" }
-
-    - name: rsync directories
-      synchronize:
-        src: "{{ item.src }}"
-        dest: "{{ item.dest }}"
-        archive: true
-        delete: true
-      loop:
-        - { src: "../inventory/default/", dest: "/etc/ansible" }
-        - { src: "../roles/", dest: "/etc/ansible/roles" }
-        - { src: "../playbooks/", dest: "/etc/ansible/playbooks" }
