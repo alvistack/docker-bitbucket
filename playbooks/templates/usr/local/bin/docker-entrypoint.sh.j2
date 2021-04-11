@@ -19,7 +19,7 @@ fi
 
 # Verify configuration with Ansible
 if [ "$1" = 'start-bitbucket.sh' ]; then
-    ansible-playbook --tags bitbucket /etc/ansible/playbooks/converge.yml
+    ansible-playbook /etc/ansible/playbooks/verify.yml
 fi
 
 exec "$@"

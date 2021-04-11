@@ -87,9 +87,6 @@
     - name: include role
       include_role:
         name: bitbucket
-        apply:
-          tags: bitbucket
-      tags: bitbucket
 
     - name: apt-get install
       apt:
