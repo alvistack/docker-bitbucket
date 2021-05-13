@@ -14,7 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# openjdk
 openjdk_release: "8"
+
+# bitbucket
 bitbucket_owner: "bitbucket"
 bitbucket_group: "bitbucket"
 bitbucket_home: "/var/atlassian/application-data/bitbucket"
