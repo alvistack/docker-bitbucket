@@ -106,6 +106,31 @@ default:
   before_script:
     - *script-git-submodule
 
+build:docker-7.13:
+  <<: *job-packer-build
+  stage: build
+  cache:
+    key: "$CI_PIPELINE_ID-docker-7.13"
+    paths:
+      - packer/*/output-docker
+  variables:
+    _PACKER_BUILDER_PROVIDER: "docker"
+    _PACKER_BUILDER_VERSION: "7.13"
+
+deploy:docker-7.13:
+  <<: *job-docker-push
+  stage: deploy
+  cache:
+    key: "$CI_PIPELINE_ID-docker-7.13"
+    paths:
+      - packer/*/output-docker
+    policy: pull
+  variables:
+    _PACKER_BUILDER_PROVIDER: "docker"
+    _PACKER_BUILDER_VERSION: "7.13"
+  needs:
+    - build:docker-7.13
+
 build:docker-7.12:
   <<: *job-packer-build
   stage: build
@@ -130,28 +155,3 @@ deploy:docker-7.12:
     _PACKER_BUILDER_VERSION: "7.12"
   needs:
     - build:docker-7.12
-
-build:docker-7.11:
-  <<: *job-packer-build
-  stage: build
-  cache:
-    key: "$CI_PIPELINE_ID-docker-7.11"
-    paths:
-      - packer/*/output-docker
-  variables:
-    _PACKER_BUILDER_PROVIDER: "docker"
-    _PACKER_BUILDER_VERSION: "7.11"
-
-deploy:docker-7.11:
-  <<: *job-docker-push
-  stage: deploy
-  cache:
-    key: "$CI_PIPELINE_ID-docker-7.11"
-    paths:
-      - packer/*/output-docker
-    policy: pull
-  variables:
-    _PACKER_BUILDER_PROVIDER: "docker"
-    _PACKER_BUILDER_VERSION: "7.11"
-  needs:
-    - build:docker-7.11
