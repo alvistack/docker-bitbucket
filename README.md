@@ -4,9 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-bitbucket.svg)](https://github.com/alvistack/docker-bitbucket/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-bitbucket.svg)](https://github.com/alvistack/docker-bitbucket/blob/master/LICENSE)
 [![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/bitbucket-7.13.svg)](https://hub.docker.com/r/alvistack/bitbucket-7.13)
-
 Bitbucket is an on-premises source code management solution for Git that's secure, fast, and enterprise grade. Create and manage repositories, set up fine-grained permissions, and collaborate on code - all with the flexibility of your servers.
-
 Learn more about Bitbucket: <https://www.atlassian.com/software/bitbucket>
 
 ## Supported Tags and Respective Packer Template Links
@@ -19,7 +17,6 @@ Learn more about Bitbucket: <https://www.atlassian.com/software/bitbucket>
 ## Overview
 
 This Docker container makes it easy to get an instance of Bitbucket up and running.
-
 Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with some minor hack:
 
   - Packaging by Packer Docker builder and Ansible provisioner in single layer
@@ -28,39 +25,30 @@ Based on [Official Ubuntu Docker Image](https://hub.docker.com/_/ubuntu/) with s
 ### Quick Start
 
 For the `Bitbucket_HOME` directory that is used to store the repository data (amongst other things) we recommend mounting a host directory as a [data volume](https://docs.docker.com/engine/tutorials/dockervolumes/#/data-volumes), or via a named volume if using a docker version \>= 1.9.
-
 Volume permission is NOT managed by entry scripts. To get started you can use a data volume, or named volumes.
-
 Start Atlassian Bitbucket Server:
-
-    # Pull latest image
-    docker pull alvistack/bitbucket-7.13
-    
-    # Run as detach
-    docker run \
-        -itd \
-        --name bitbucket \
-        --publish 7990:7990 \
-        --publish 7999:7999 \
-        --volume /var/atlassian/application-data/bitbucket:/var/atlassian/application-data/bitbucket \
-        alvistack/bitbucket-7.13
-
+\# Pull latest image
+docker pull alvistack/bitbucket-7.13
+\# Run as detach
+docker run   
+\-itd   
+\--name bitbucket   
+\--publish 7990:7990   
+\--publish 7999:7999   
+\--volume /var/atlassian/application-data/bitbucket:/var/atlassian/application-data/bitbucket   
+alvistack/bitbucket-7.13
 **Success**. Bitbucket is now available on <http://localhost:7990>
-
 Please ensure your container has the necessary resources allocated to it. We recommend 2GiB of memory allocated to accommodate both the application server and the git processes. See [Supported Platforms](https://confluence.atlassian.com/display/Bitbucket/Supported+Platforms) for further information.
 
 ## Upgrade
 
 To upgrade to a more recent version of Bitbucket Server you can simply stop the Bitbucket
 container and start a new one based on a more recent image:
-
-    docker stop bitbucket
-    docker rm bitbucket
-    docker run ... (see above)
-
+docker stop bitbucket
+docker rm bitbucket
+docker run ... (see above)
 As your data is stored in the data volume directory on the host, it will still
 be available after the upgrade.
-
 Note: Please make sure that you don't accidentally remove the bitbucket container and its volumes using the -v option.
 
 ## Backup
