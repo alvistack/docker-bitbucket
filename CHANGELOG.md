@@ -17,9 +17,12 @@
 
 ### Major Changes
 
-  - Bugfix [ansible-lint `namespace`](https://github.com/ansible-community/ansible-lint/pull/1451)
-  - Bugfix [ansible-lint `no-handler`](https://github.com/ansible-community/ansible-lint/pull/1402)
-  - Bugfix [ansible-lint `unnamed-task`](https://github.com/ansible-community/ansible-lint/pull/1413)
+  - Bugfix [ansible-lint
+    `namespace`](https://github.com/ansible-community/ansible-lint/pull/1451)
+  - Bugfix [ansible-lint
+    `no-handler`](https://github.com/ansible-community/ansible-lint/pull/1402)
+  - Bugfix [ansible-lint
+    `unnamed-task`](https://github.com/ansible-community/ansible-lint/pull/1413)
   - Remove adhoc config with environment variables
   - Change GIT tag as per Vagrant Box naming and versioning limitation
 
@@ -103,7 +106,8 @@
 
   - Run systemd service with specific system user
   - Explicitly set system user UID/GID
-  - Manually install archived GIT 2.20.1 for Bitbucket 6.0+, see <https://jira.atlassian.com/browse/BSERV-11593>
+  - Manually install archived GIT 2.20.1 for Bitbucket 6.0+, see
+    <https://jira.atlassian.com/browse/BSERV-11593>
   - Porting to Molecule based
 
 ## 5.16.0-1alvistack1 - 2018-12-10
@@ -132,6 +136,7 @@
 
 ## 5.8.1-0alvistack1 - 2018-02-28
 
-  - Migrate from <https://github.com/alvistack/ansible-container-bitbucket>
+  - Migrate from
+    <https://github.com/alvistack/ansible-container-bitbucket>
   - Pure Dockerfile implementation
   - Ready for both Docker and Kubernetes use cases
