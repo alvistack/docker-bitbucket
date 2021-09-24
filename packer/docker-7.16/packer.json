@@ -21,6 +21,7 @@
       ],
       "commit": true,
       "image": "ubuntu:20.04",
+      "privileged": true,
       "type": "docker"
     }
   ],
