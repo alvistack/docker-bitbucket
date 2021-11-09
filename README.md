@@ -5,7 +5,7 @@
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-bitbucket/master)](https://gitlab.com/alvistack/docker-bitbucket/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/docker-bitbucket.svg)](https://github.com/alvistack/docker-bitbucket/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/docker-bitbucket.svg)](https://github.com/alvistack/docker-bitbucket/blob/master/LICENSE)
-[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/bitbucket-7.17.svg)](https://hub.docker.com/r/alvistack/bitbucket-7.17)
+[![Docker Pulls](https://img.shields.io/docker/pulls/alvistack/bitbucket-7.18.svg)](https://hub.docker.com/r/alvistack/bitbucket-7.18)
 
 Bitbucket is an on-premises source code management solution for Git that's secure, fast, and enterprise grade. Create and manage repositories, set up fine-grained permissions, and collaborate on code - all with the flexibility of your servers.
 
@@ -13,10 +13,10 @@ Learn more about Bitbucket: <https://www.atlassian.com/software/bitbucket>
 
 ## Supported Tags and Respective Packer Template Links
 
+  - [`alvistack/bitbucket-7.18`](https://hub.docker.com/r/alvistack/bitbucket-7.18)
+      - [`packer/docker-7.18/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-7.18/packer.json)
   - [`alvistack/bitbucket-7.17`](https://hub.docker.com/r/alvistack/bitbucket-7.17)
       - [`packer/docker-7.17/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-7.17/packer.json)
-  - [`alvistack/bitbucket-7.16`](https://hub.docker.com/r/alvistack/bitbucket-7.16)
-      - [`packer/docker-7.16/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-7.16/packer.json)
 
 ## Overview
 
@@ -36,7 +36,7 @@ Volume permission is NOT managed by entry scripts. To get started you can use a 
 Start Atlassian Bitbucket Server:
 
     # Pull latest image
-    docker pull alvistack/bitbucket-7.17
+    docker pull alvistack/bitbucket-7.18
     
     # Run as detach
     docker run \
@@ -45,7 +45,7 @@ Start Atlassian Bitbucket Server:
         --publish 7990:7990 \
         --publish 7999:7999 \
         --volume /var/atlassian/application-data/bitbucket:/var/atlassian/application-data/bitbucket \
-        alvistack/bitbucket-7.17
+        alvistack/bitbucket-7.18
 
 **Success**. Bitbucket is now available on <http://localhost:7990>
 
