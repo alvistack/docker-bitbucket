@@ -20,7 +20,7 @@
         "CMD [\"start-bitbucket.sh\", \"-fg\"]"
       ],
       "commit": true,
-      "image": "ubuntu:20.04",
+      "image": "ubuntu:22.04",
       "privileged": true,
       "type": "docker"
     }
