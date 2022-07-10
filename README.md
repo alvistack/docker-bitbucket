@@ -1,6 +1,6 @@
 # Docker Image Packaging for Atlassian Bitbucket
 
-<img src="/alvistack.svg" width="75" alt="AlviStack">
+<a href="https://alvistack.com" title="AlviStack" target="_blank"><img src="/alvistack.svg" height="75" alt="AlviStack"></a>
 
 [![GitLab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/docker-bitbucket/master)](https://gitlab.com/alvistack/docker-bitbucket/-/pipelines)
 [![GitHub tag](https://img.shields.io/github/tag/alvistack/docker-bitbucket.svg)](https://github.com/alvistack/docker-bitbucket/tags)
