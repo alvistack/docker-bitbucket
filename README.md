@@ -17,6 +17,8 @@ Learn more about Bitbucket: <https://www.atlassian.com/software/bitbucket>
       - [`packer/docker-8.3/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-8.3/packer.json)
   - [`alvistack/bitbucket-8.2`](https://hub.docker.com/r/alvistack/bitbucket-8.2)
       - [`packer/docker-8.2/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-8.2/packer.json)
+  - [`alvistack/bitbucket-7.21`](https://hub.docker.com/r/alvistack/bitbucket-7.21)
+      - [`packer/docker-7.21/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-7.21/packer.json)
 
 ## Overview
 
