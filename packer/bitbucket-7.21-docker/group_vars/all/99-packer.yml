@@ -15,3 +15,5 @@
 # limitations under the License.
 
 bitbucket_release: "7.21"
+
+git_release: "2.35"

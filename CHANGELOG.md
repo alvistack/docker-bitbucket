@@ -4,6 +4,8 @@
 
 ### Major Changes
 
+-   Support multiple GIT release with package pinning
+
 ## 20221209.1.1 - 2022-12-09
 
 ### Major Changes
