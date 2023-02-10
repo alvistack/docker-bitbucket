@@ -134,6 +134,45 @@ default:
   before_script:
     - *script-git-submodule
 
+build:bitbucket-8.8-docker:
+  <<: *job-packer-build
+  stage: build
+  cache:
+    key: "$CI_PIPELINE_ID-bitbucket-8.8-docker"
+    paths:
+      - packer/*/output-docker
+  variables:
+    _IMAGE: "bitbucket-8.8"
+    _PROVIDER: "docker"
+
+test:bitbucket-8.8-docker:
+  <<: *job-molecule-test
+  stage: test
+  cache:
+    key: "$CI_PIPELINE_ID-bitbucket-8.8-docker"
+    paths:
+      - packer/*/output-docker
+    policy: pull
+  variables:
+    _IMAGE: "bitbucket-8.8"
+    _PROVIDER: "docker"
+  needs:
+    - build:bitbucket-8.8-docker
+
+deploy:bitbucket-8.8-docker:
+  <<: *job-docker-push
+  stage: deploy
+  cache:
+    key: "$CI_PIPELINE_ID-bitbucket-8.8-docker"
+    paths:
+      - packer/*/output-docker
+    policy: pull
+  variables:
+    _IMAGE: "bitbucket-8.8"
+    _PROVIDER: "docker"
+  needs:
+    - test:bitbucket-8.8-docker
+
 build:bitbucket-8.7-docker:
   <<: *job-packer-build
   stage: build
@@ -172,45 +211,6 @@ deploy:bitbucket-8.7-docker:
     _PROVIDER: "docker"
   needs:
     - test:bitbucket-8.7-docker
-
-build:bitbucket-8.6-docker:
-  <<: *job-packer-build
-  stage: build
-  cache:
-    key: "$CI_PIPELINE_ID-bitbucket-8.6-docker"
-    paths:
-      - packer/*/output-docker
-  variables:
-    _IMAGE: "bitbucket-8.6"
-    _PROVIDER: "docker"
-
-test:bitbucket-8.6-docker:
-  <<: *job-molecule-test
-  stage: test
-  cache:
-    key: "$CI_PIPELINE_ID-bitbucket-8.6-docker"
-    paths:
-      - packer/*/output-docker
-    policy: pull
-  variables:
-    _IMAGE: "bitbucket-8.6"
-    _PROVIDER: "docker"
-  needs:
-    - build:bitbucket-8.6-docker
-
-deploy:bitbucket-8.6-docker:
-  <<: *job-docker-push
-  stage: deploy
-  cache:
-    key: "$CI_PIPELINE_ID-bitbucket-8.6-docker"
-    paths:
-      - packer/*/output-docker
-    policy: pull
-  variables:
-    _IMAGE: "bitbucket-8.6"
-    _PROVIDER: "docker"
-  needs:
-    - test:bitbucket-8.6-docker
 
 build:bitbucket-7.21-docker:
   <<: *job-packer-build
