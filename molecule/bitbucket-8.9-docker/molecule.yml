@@ -18,7 +18,7 @@ driver:
   name: podman
 platforms:
   - name: ${_MOLECULE_INSTANCE_NAME}-1
-    image: alvistack/bitbucket-8.7
+    image: alvistack/bitbucket-8.9
     pre_build_image: true
     privileged: true
 dependency:

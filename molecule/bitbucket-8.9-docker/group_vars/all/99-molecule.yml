@@ -14,6 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-bitbucket_release: "8.7"
+bitbucket_release: "8.9"
 
-git_release: "2.38"
+git_release: "2.37"
