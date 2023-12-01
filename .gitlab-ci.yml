@@ -134,6 +134,45 @@ default:
     - *script-git-submodule
     - *script-linters
 
+build:bitbucket-8.16-docker:
+  <<: *job-packer-build
+  stage: build
+  cache:
+    key: "$CI_PIPELINE_ID-bitbucket-8.16-docker"
+    paths:
+      - packer/*/output-docker
+  variables:
+    _IMAGE: "bitbucket-8.16"
+    _PROVIDER: "docker"
+
+test:bitbucket-8.16-docker:
+  <<: *job-molecule-test
+  stage: test
+  cache:
+    key: "$CI_PIPELINE_ID-bitbucket-8.16-docker"
+    paths:
+      - packer/*/output-docker
+    policy: pull
+  variables:
+    _IMAGE: "bitbucket-8.16"
+    _PROVIDER: "docker"
+  needs:
+    - build:bitbucket-8.16-docker
+
+deploy:bitbucket-8.16-docker:
+  <<: *job-docker-push
+  stage: deploy
+  cache:
+    key: "$CI_PIPELINE_ID-bitbucket-8.16-docker"
+    paths:
+      - packer/*/output-docker
+    policy: pull
+  variables:
+    _IMAGE: "bitbucket-8.16"
+    _PROVIDER: "docker"
+  needs:
+    - test:bitbucket-8.16-docker
+
 build:bitbucket-8.15-docker:
   <<: *job-packer-build
   stage: build
@@ -172,45 +211,6 @@ deploy:bitbucket-8.15-docker:
     _PROVIDER: "docker"
   needs:
     - test:bitbucket-8.15-docker
-
-build:bitbucket-8.14-docker:
-  <<: *job-packer-build
-  stage: build
-  cache:
-    key: "$CI_PIPELINE_ID-bitbucket-8.14-docker"
-    paths:
-      - packer/*/output-docker
-  variables:
-    _IMAGE: "bitbucket-8.14"
-    _PROVIDER: "docker"
-
-test:bitbucket-8.14-docker:
-  <<: *job-molecule-test
-  stage: test
-  cache:
-    key: "$CI_PIPELINE_ID-bitbucket-8.14-docker"
-    paths:
-      - packer/*/output-docker
-    policy: pull
-  variables:
-    _IMAGE: "bitbucket-8.14"
-    _PROVIDER: "docker"
-  needs:
-    - build:bitbucket-8.14-docker
-
-deploy:bitbucket-8.14-docker:
-  <<: *job-docker-push
-  stage: deploy
-  cache:
-    key: "$CI_PIPELINE_ID-bitbucket-8.14-docker"
-    paths:
-      - packer/*/output-docker
-    policy: pull
-  variables:
-    _IMAGE: "bitbucket-8.14"
-    _PROVIDER: "docker"
-  needs:
-    - test:bitbucket-8.14-docker
 
 build:bitbucket-8.9-docker:
   <<: *job-packer-build
