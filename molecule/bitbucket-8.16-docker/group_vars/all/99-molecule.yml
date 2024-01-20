@@ -16,4 +16,6 @@
 
 bitbucket_release: "8.16"
 
+openjdk_release: "17"
+
 git_release: "2.42"
