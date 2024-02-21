@@ -30,5 +30,6 @@ bitbucket_catalina_connector_proxyport: ~
 bitbucket_catalina_context_path: ~
 bitbucket_jvm_support_recommended_args: >-
   -Datlassian.plugins.enable.wait=300
+  -XX:+IgnoreUnrecognizedVMOptions
   -XX:+UnlockExperimentalVMOptions
 bitbucket_autologin_cookie_age: "120"
