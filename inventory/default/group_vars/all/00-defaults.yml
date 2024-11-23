@@ -36,6 +36,6 @@ bitbucket_jvm_gc_args: >-
   -XX:+UseZGC
   -XX:ZCollectionInterval=5
   -XX:ZAllocationSpikeTolerance=5
-  -XX:+ExplicitGCInvokesConcurrent  
+  -XX:+ExplicitGCInvokesConcurrent
 bitbucket_session_timeout: "120"
 bitbucket_autologin_cookie_age: "10080"
