@@ -134,44 +134,44 @@ default:
     - *script-git-submodule
     - *script-linters
 
-build:bitbucket-9.3-docker:
+build:bitbucket-9.4-docker:
   <<: *job-packer-build
   stage: build
   cache:
-    key: $CI_PIPELINE_ID-bitbucket-9.3-docker
+    key: $CI_PIPELINE_ID-bitbucket-9.4-docker
     paths:
       - packer/*/output-docker
   variables:
-    _IMAGE: bitbucket-9.3
+    _IMAGE: bitbucket-9.4
     _PROVIDER: docker
 
-test:bitbucket-9.3-docker:
+test:bitbucket-9.4-docker:
   <<: *job-molecule-test
   stage: test
   cache:
-    key: $CI_PIPELINE_ID-bitbucket-9.3-docker
+    key: $CI_PIPELINE_ID-bitbucket-9.4-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: bitbucket-9.3
+    _IMAGE: bitbucket-9.4
     _PROVIDER: docker
   needs:
-    - build:bitbucket-9.3-docker
+    - build:bitbucket-9.4-docker
 
-deploy:bitbucket-9.3-docker:
+deploy:bitbucket-9.4-docker:
   <<: *job-docker-push
   stage: deploy
   cache:
-    key: $CI_PIPELINE_ID-bitbucket-9.3-docker
+    key: $CI_PIPELINE_ID-bitbucket-9.4-docker
     paths:
       - packer/*/output-docker
     policy: pull
   variables:
-    _IMAGE: bitbucket-9.3
+    _IMAGE: bitbucket-9.4
     _PROVIDER: docker
   needs:
-    - test:bitbucket-9.3-docker
+    - test:bitbucket-9.4-docker
 
 build:bitbucket-8.19-docker:
   <<: *job-packer-build
