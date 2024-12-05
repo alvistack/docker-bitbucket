@@ -9,7 +9,7 @@ tag](https://img.shields.io/github/tag/alvistack/docker-bitbucket.svg)](https://
 [![GitHub
 license](https://img.shields.io/github/license/alvistack/docker-bitbucket.svg)](https://github.com/alvistack/docker-bitbucket/blob/master/LICENSE)
 [![Docker
-Pulls](https://img.shields.io/docker/pulls/alvistack/bitbucket-9.3.svg)](https://hub.docker.com/r/alvistack/bitbucket-9.3)
+Pulls](https://img.shields.io/docker/pulls/alvistack/bitbucket-9.4.svg)](https://hub.docker.com/r/alvistack/bitbucket-9.4)
 
 Bitbucket is an on-premises source code management solution for Git
 that's secure, fast, and enterprise grade. Create and manage
@@ -21,8 +21,8 @@ Learn more about Bitbucket:
 
 ## Supported Tags and Respective Packer Template Links
 
-- [`alvistack/bitbucket-9.3`](https://hub.docker.com/r/alvistack/bitbucket-9.3)
-  - [`packer/docker-9.3/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-9.3/packer.json)
+- [`alvistack/bitbucket-9.4`](https://hub.docker.com/r/alvistack/bitbucket-9.4)
+  - [`packer/docker-9.4/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-9.4/packer.json)
 - [`alvistack/bitbucket-8.19`](https://hub.docker.com/r/alvistack/bitbucket-8.19)
   - [`packer/docker-8.19/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-8.19/packer.json)
 - [`alvistack/bitbucket-8.9`](https://hub.docker.com/r/alvistack/bitbucket-8.9)
@@ -55,7 +55,7 @@ can use a data volume, or named volumes.
 Start Atlassian Bitbucket Server:
 
     # Pull latest image
-    docker pull alvistack/bitbucket-9.3
+    docker pull alvistack/bitbucket-9.4
 
     # Run as detach
     docker run \
@@ -64,7 +64,7 @@ Start Atlassian Bitbucket Server:
         --publish 7990:7990 \
         --publish 7999:7999 \
         --volume /var/atlassian/application-data/bitbucket:/var/atlassian/application-data/bitbucket \
-        alvistack/bitbucket-9.3
+        alvistack/bitbucket-9.4
 
 **Success**. Bitbucket is now available on <http://localhost:7990>
 
