@@ -27,8 +27,6 @@ Learn more about Bitbucket:
   - [`packer/docker-9.4/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-9.4/packer.json)
 - [`alvistack/bitbucket-8.19`](https://hub.docker.com/r/alvistack/bitbucket-8.19)
   - [`packer/docker-8.19/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-8.19/packer.json)
-- [`alvistack/bitbucket-8.9`](https://hub.docker.com/r/alvistack/bitbucket-8.9)
-  - [`packer/docker-8.9/packer.json`](https://github.com/alvistack/docker-bitbucket/blob/master/packer/docker-8.9/packer.json)
 
 ## Overview
 
