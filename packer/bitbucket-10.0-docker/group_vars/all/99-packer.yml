@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-bitbucket_release: "9.6"
+bitbucket_release: "10.0"
 
 openjdk_release: "21"
 
